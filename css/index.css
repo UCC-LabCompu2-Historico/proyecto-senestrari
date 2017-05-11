@@ -1,0 +1,19 @@
+.jumbotron
+{
+    background-color: #204d74;
+
+}
+h2
+{
+    color: #ffffff;
+}
+textarea[id="m2Txta"]
+{
+    overflow:auto;
+    resize:none;
+
+}
+[id="inputPxH"]
+{
+    color: #269a0b;
+}

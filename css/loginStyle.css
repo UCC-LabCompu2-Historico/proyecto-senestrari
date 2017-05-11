@@ -1,0 +1,32 @@
+.panel-primary
+{
+    margin-left: 27%;
+    max-width: 500px;
+}
+input[type="text"] {
+    margin-bottom: 25px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+input[type="password"] {
+    margin-bottom: 50px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.jumbotron
+{
+    background-color: #204d74;
+
+}
+.form-signin
+{
+
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+h3[id="Titulo1"]
+{
+    color: #ffffff;
+}
