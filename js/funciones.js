@@ -15,6 +15,13 @@ function tPredefinido() {
 
 
 }
+function loadYears()
+{
+    for (i = new Date().getFullYear(); i > 1900; i--)
+    {
+        document.getElementById("")
+    }
+}
 
 function customMesage()
 {
@@ -30,7 +37,27 @@ function limpiar()
 function clacular() {
     var horas, resul;
     horas = document.getElementById("inputPxH").value;
-    resul=horas*76;
-    alert('Usted va a  ganar $'+resul+" que los disfrute !!");
+    if(horas!="")
+    {
+        document.getElementById("inputPxH").disabled = true;
+        resul=horas*76;
+        document.getElementById("pesos").innerHTML=resul;
+        document.getElementById("dolares").innerHTML=resul*17;
+        document.getElementById("euros").innerHTML=resul*19;
+        document.getElementById("resultados").style.visibility = "visible";
+
+
+    }
+
+
+
+}
+function ocultar() {
+    document.getElementById("resultados").style.visibility ="hidden";
+    document.getElementById("pesos").innerHTML="";
+    document.getElementById("dolares").innerHTML="";
+    document.getElementById("euros").innerHTML="";
+    document.getElementById("inputPxH").value="";
+    document.getElementById("inputPxH").disabled = false;
 
 }

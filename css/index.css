@@ -17,3 +17,11 @@ textarea[id="m2Txta"]
 {
     color: #269a0b;
 }
+[id="resultados"]
+{
+    visibility: hidden;
+
+}
+[id="tablaTitulo"] {
+    color: #313f9a;
+}

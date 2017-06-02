@@ -276,6 +276,7 @@
                     <h3>Mensaje de ausencia de profesores</h3>
                     <div class="container">
                         Año: 20
+
                         <select id="s-anio" class="form-inline">
 
                             <option value="16">16</option>
@@ -436,6 +437,26 @@
                                 <label>Precio por hora =$ 76</label>
                                 <button type="button" class=" btn btn-info" onclick="clacular()"> Calcular</button>
 
+                            <div class="container" id="resultados">
+                                <h2 id="tablaTitulo"> Resultados</h2>
+                                <table class="table table-striped" id="tblaresultados">
+                                    <thead>
+                                    <tr>
+                                        <th >Pesos</th>
+                                        <th >Dolares</th>
+                                        <th >Euros</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td id ="pesos"></td>
+                                        <td id="dolares"></td>
+                                        <td id="euros"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button class="btn btn-info" onclick="ocultar()">ok</button>
+                            </div>
                         </form>
 
 
