@@ -15,13 +15,6 @@ function tPredefinido() {
 
 
 }
-function loadYears()
-{
-    for (i = new Date().getFullYear(); i > 1900; i--)
-    {
-        document.getElementById("")
-    }
-}
 
 function customMesage()
 {
@@ -61,3 +54,9 @@ function ocultar() {
     document.getElementById("inputPxH").disabled = false;
 
 }
+function firmar() {
+    var chbox = document.getElementById("chboxFirma");
+    var footer = document.getElementById("footerMJ");
+
+}
+

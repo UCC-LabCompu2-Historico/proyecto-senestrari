@@ -13,15 +13,18 @@ textarea[id="m2Txta"]
     resize:none;
 
 }
-[id="inputPxH"]
+
+#inputPxH
 {
     color: #269a0b;
 }
-[id="resultados"]
+
+#resultados
 {
     visibility: hidden;
 
 }
-[id="tablaTitulo"] {
+
+#tablaTitulo {
     color: #313f9a;
 }
