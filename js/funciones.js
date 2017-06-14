@@ -1,3 +1,10 @@
+
+
+/**
+ * Descripción crea un mensaje predefinidio deacuerdo a lo seleccionado
+ * @method tPredefinido()
+ * @return void
+ */
 function tPredefinido() {
     var fecha;
     var carrera = document.getElementById("s-carrera").value;
@@ -15,18 +22,34 @@ function tPredefinido() {
 
 
 }
-
-function customMesage()
+/**
+ * Descripción:  toma lo que hay en el textarea  y lo muestra
+ * @method customMessage()
+ * @return Alert
+ */
+function customMessage()
 {
     text = document.getElementById("m2Txta").value;
     alert(text);
     limpiar();
 
 }
+
+/**
+ * Descripción : borra lo que hay en m2Txta
+ * @method limpiar()
+ * @return Void
+ */
 function limpiar()
 {
     document.getElementById("m2Txta").value="";
 }
+
+/**
+ * Descripción calcula las otras trabajadadas  y ademas escribe en la tabla ls resultados
+ * @method calcular()
+ * @return vaoid
+ */
 function clacular() {
     var horas, resul;
     horas = document.getElementById("inputPxH").value;
@@ -38,13 +61,15 @@ function clacular() {
         document.getElementById("dolares").innerHTML=resul*17;
         document.getElementById("euros").innerHTML=resul*19;
         document.getElementById("resultados").style.visibility = "visible";
-
-
     }
 
 
 
-}
+}/**
+ * Descripción  oculata la tabla resultados   y ademas borra el contenido de cada fila
+ * @method oculatar()
+ * @return Valor que retorna
+ */
 function ocultar() {
     document.getElementById("resultados").style.visibility ="hidden";
     document.getElementById("pesos").innerHTML="";
@@ -54,9 +79,5 @@ function ocultar() {
     document.getElementById("inputPxH").disabled = false;
 
 }
-function firmar() {
-    var chbox = document.getElementById("chboxFirma");
-    var footer = document.getElementById("footerMJ");
 
-}
 

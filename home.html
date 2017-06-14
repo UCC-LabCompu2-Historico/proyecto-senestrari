@@ -13,16 +13,19 @@
     <script src="js/char.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="icon.ico">
 
-    <div class="container">
+</head>
+
+<body onload="dibujar()">
+
+<header>
+
+
         <div class="jumbotron">
 
             <h2>ZardMessage</h2>
 
         </div>
-    </div>
-</head>
-<body onload="dibujar()">
-
+</header>
 <div class="container">
 
     <div class="row">
@@ -40,12 +43,17 @@
         <div class="col-md-7">
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
-                    <div>
-                        <h3>HOME</h3>
-                        <canvas style="background-color: #0f0f0f" align="left" width="50" height="50"></canvas>
-                    </div>
+                    <header>
 
-                    <p>Bienvenido al sistema de mensajes</p>
+                        <h3>HOME</h3>
+
+                    </header>
+
+                    <footer>
+                        <p>Bienvenido al sistema de mensajes</p>
+                    </footer>
+
+
 				<canvas id='canvas' width='405' height='325' ></canvas>
 
                 </div>
@@ -197,11 +205,8 @@
                         </div>
                         <div class="panel-footer" id="footerMJ">
                             <form >
-                                <div id="divFirma">
-                                    <input id="chboxFirma" type="checkbox" onclick="firmar()"> Firma</label>
-                                </div>
                                 <button type="button" class="btn btn-danger" onclick="limpiar()">Cancelar</button>
-                                <button type="submit" class="btn btn-primary" onclick="customMesage()">Enviar Mensaje</button>
+                                <button type="submit" class="btn btn-primary" onclick="customMessage()">Enviar Mensaje</button>
 
                             </form>
 
@@ -251,6 +256,8 @@
         </div>
     </div>
 </div>
-
+<footer>
+Diseñado por Francisco Senestrari
+</footer>
 </body>
 </html>

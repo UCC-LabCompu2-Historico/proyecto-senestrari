@@ -2,12 +2,13 @@
 {
     background-color: #204d74;
 
+
 }
-h2
-{
-    color: #ffffff;
+h2{
+    color: #f8fff9;
+    text-align: center;
 }
-textarea[id="m2Txta"]
+#m2Txta
 {
     overflow:auto;
     resize:none;
@@ -27,4 +28,8 @@ textarea[id="m2Txta"]
 
 #tablaTitulo {
     color: #313f9a;
+}
+#divBtnMG
+{
+    margin-top: 20px;
 }
