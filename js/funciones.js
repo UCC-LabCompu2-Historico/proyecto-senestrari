@@ -1,5 +1,3 @@
-
-
 /**
  * Descripción crea un mensaje predefinidio deacuerdo a lo seleccionado
  * @method tPredefinido()
@@ -11,12 +9,13 @@ function tPredefinido() {
     var materia = document.getElementById("s-materia").value;
     var profesor = document.getElementById("s-profesor").value;
     var dia, mes, anio;
+    var tex;
 
     dia = document.getElementById("s-dia").value;
     mes = document.getElementById("s-mes").value;
     anio = 20 + document.getElementById("s-anio").value;
         fecha = dia + "/" + mes + "/" + anio;
-        var tex = "Estimadods alumnos de " + carrera + "  el día " + fecha + ", No tendran clases de " + materia
+    tex = "Estimadods alumnos de " + carrera + "  el día " + fecha + ", No tendran clases de " + materia
             + ",  con el  profesor/a" + profesor;
     document.getElementById("lb1").textContent = tex;
 
@@ -51,8 +50,8 @@ function limpiar()
  * @return vaoid
  */
 function clacular() {
-    var horas, resul;
-    horas = document.getElementById("inputPxH").value;
+    var horas = document.getElementById("inputPxH").value;
+    var resul;
     if(horas!="")
     {
         document.getElementById("inputPxH").disabled = true;
@@ -64,8 +63,8 @@ function clacular() {
     }
 
 
-
-}/**
+}
+/**
  * Descripción  oculata la tabla resultados   y ademas borra el contenido de cada fila
  * @method oculatar()
  * @return Valor que retorna

@@ -4,10 +4,12 @@
 
 
 }
-h2{
+
+h2 {
     color: #f8fff9;
     text-align: center;
 }
+
 #m2Txta
 {
     overflow:auto;
@@ -29,7 +31,11 @@ h2{
 #tablaTitulo {
     color: #313f9a;
 }
-#divBtnMG
-{
+
+#divBtnMG {
     margin-top: 20px;
+}
+#canvasFirma
+{
+    visibility: hidden;
 }

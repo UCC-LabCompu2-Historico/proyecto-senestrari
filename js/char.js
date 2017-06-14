@@ -1,6 +1,7 @@
 function dibujar() {
     dibujarCH();
 
+    cargar();
 
 }
 /**
@@ -17,22 +18,22 @@ function cargar() {
     ctx.shadowBlur = 15;
     ctx.shadowColor = '#3498DB';
     ctx.strokeStyle = '#3498DB';
-    function degToRoad(degree)
-    {
+    function degToRoad(degree) {
         var factor = Math.PI / 180;
         return factor * degree;
     }
-    function renderTime()
-    {
+
+    function renderTime() {
         var now = new Date();
         var seconds = now.getSeconds();
         var milliseconds = now.getMilliseconds();
         var newSconds = seconds + (milliseconds / 1000);
         ctx.beginPath();
-        ctx.arc(250,250,140,degToRoad(270),degToRoad((newSconds*6)-90));
+        ctx.arc(250, 250, 140, degToRoad(270), degToRoad((newSconds * 6) - 90));
         ctx.stroke();
     }
-    setInterval(renderTime,50);
+
+    setInterval(renderTime, 50);
 
 
 }
