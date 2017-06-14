@@ -6,13 +6,17 @@
  * @method dibujar()
  * @return Void
  */
-function dibujar() {
-    canvas = document.getElementById('canvasFirma');
+var draw;
+function  comenzar() {
+    canvas = document.getElementById("canvasFirma");
     ctx = canvas.getContext('2d');
-    document.addEventListener('mousedown', presionar, false);
-    document.addEventListener('mousemove', mover, false);
-    document.addEventListener('mouseup', soltar, false);
+    document.addEventListener('mousedown',presionar, false);
+    document.addEventListener('mousemove',mover, false);
+    document.addEventListener('mouseup',soltar, false);
+    document.addEventListener('')
+
 }
+
 /**
  * Descripción:  mostramos que vamos a empezar a dibujar  y buscamos las coordenadas x e y
  * @method presionar()
@@ -31,6 +35,7 @@ function presionar(usuario) {
  * @return Void
  */
 function mover(usuario) {
+
     if (draw) {
         ctx.lineWidth = 1;
         ctx.lineCap = 'round';
