@@ -1,42 +1,10 @@
-function dibujar() {
-    dibujarCH();
 
-    cargar();
-
-}
 /**
  * Descripción dibuja canvas de a pestaña home
  * @method dibujarCH
  * @return Void
  */
-function cargar() {
 
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    ctx.lineWidth = 20;
-    ctx.lineCap = 'round';
-    ctx.shadowBlur = 15;
-    ctx.shadowColor = '#3498DB';
-    ctx.strokeStyle = '#3498DB';
-    function degToRoad(degree) {
-        var factor = Math.PI / 180;
-        return factor * degree;
-    }
-
-    function renderTime() {
-        var now = new Date();
-        var seconds = now.getSeconds();
-        var milliseconds = now.getMilliseconds();
-        var newSconds = seconds + (milliseconds / 1000);
-        ctx.beginPath();
-        ctx.arc(250, 250, 140, degToRoad(270), degToRoad((newSconds * 6) - 90));
-        ctx.stroke();
-    }
-
-    setInterval(renderTime, 50);
-
-
-}
 function dibujarCH() {
     var ctx = document.getElementById("canvas").getContext("2d");
 
