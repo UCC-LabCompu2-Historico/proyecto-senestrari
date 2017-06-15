@@ -13,7 +13,6 @@ function  comenzar() {
     document.addEventListener('mousedown',presionar, false);
     document.addEventListener('mousemove',mover, false);
     document.addEventListener('mouseup',soltar, false);
-    document.addEventListener('')
 
 }
 

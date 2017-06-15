@@ -47,7 +47,7 @@ function limpiar()
 /**
  * Descripción calcula las otras trabajadadas  y ademas escribe en la tabla ls resultados
  * @method calcular()
- * @return vaoid
+ * @return void
  */
 function clacular() {
     var horas = document.getElementById("inputPxH").value;
@@ -67,7 +67,7 @@ function clacular() {
 /**
  * Descripción  oculata la tabla resultados   y ademas borra el contenido de cada fila
  * @method oculatar()
- * @return Valor que retorna
+ * @return void
  */
 function ocultar() {
     document.getElementById("resultados").style.visibility ="hidden";
@@ -78,5 +78,20 @@ function ocultar() {
     document.getElementById("inputPxH").disabled = false;
 
 }
-
+/**
+ * Descripción  abre popup para firmar
+ * @method popup()
+ * @return void
+ */
+function popup() {
+    window.open("firma.html");
+}
+/**
+ * Descripción  cancela  y cierra pagina
+ * @method salir()
+ * @return void
+ */
+function salir() {
+    window.close();
+}
 
