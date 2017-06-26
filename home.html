@@ -1,261 +1,173 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>ZM</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/homeStyle.css">
     <script src="js/funciones.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap/jquery.min.js"></script>
     <script src="js/char.js" type="text/javascript"></script>
     <script src="js/cv.js" type="text/javascript"></script>
-
-    <link rel="shortcut icon" href="icon.ico">
+    <script src="js/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="img/icon.ico">
+    <script src="js/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 
 </head>
-
-<body onload="dibujarCH()">
-
+<body onload="dibujarCH();cargar();">
 <header>
-
     <div class="jumbotron">
-
-            <h2>ZardMessage</h2>
-
-        </div>
+        <h2>ZardMessage</h2>
+    </div>
 </header>
-<div class="container">
-
-    <div class="row">
-        <aside>
-
-                <div class="col-md-3">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
-                        <li><a data-toggle="pill" href="#menu1">Profesor Ausente</a></li>
-                        <li><a data-toggle="pill" href="#menu2">Mensaje Generales</a></li>
-                        <li><a data-toggle="pill" href="#menu3">Claculo de </a></li>
-                    </ul>
+<aside>
+    <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+            <li><a data-toggle="pill" href="#menu1">Profesor Ausente</a></li>
+            <li><a data-toggle="pill" href="#menu2">Mensaje Generales</a></li>
+            <li><a data-toggle="pill" href="#menu3">Claculo de </a></li>
+        </ul>
+    </div>
+</aside>
+<section>
+    <div class="col-md-7">
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class="panel panel-heading"><h3>HOME</h3></div>
+                <div class="panel-body">
+                    <p>Bienvenido al sistema de mensajes</p>
+                    <canvas id='canvasCarizard' width='405' height='300'></canvas>
                 </div>
-        </aside>
-        <section>
-            <div class="col-md-7">
-                <div class="tab-content">
-                    <div id="home" class="tab-pane fade in active">
-                        <div class="panel panel-heading"><h3>HOME</h3></div>
-                        <div class="panel-body">
-
-                            <p>Bienvenido al sistema de mensajes</p>
-                            <canvas id='canvas' width='405' height='325'></canvas>
-                        </div>
-
-                    </div>
-                    <div id="menu1" class="tab-pane fade">
-                        <div class="panel panel-heading"><h3>Mensaje de ausencia de profesores</h3></div>
-                        <div class="panel-body">
-                            <div class="container">
-                                Año: 20
-                                <select id="s-anio" class="form-inline">
-
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-
-
-                                </select>
-
-                                Mes
-                                <select id="s-mes" name="dob_mes">
-                                    <option value="-">-</option>
-                                    <option value="1">Enero</option>
-                                    <option value="2">Febrero</option>
-                                    <option value="3">Marzo</option>
-                                    <option value="4">Abril</option>
-                                    <option value="5">Mayo</option>
-                                    <option value="6">Junio</option>
-                                    <option value="7">Julio</option>
-                                    <option value="8">Augostot</option>
-                                    <option value="9">Septiembre</option>
-                                    <option value="10">Octubre</option>
-                                    <option value="11">Noviembre</option>
-                                    <option value="12">Deciembre</option>
-                                </select>
-                                Dia
-                                <select id="s-dia" name="dob_dia">
-                                    <option value="-">-</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                                <br>
-                                <br>
-                                Carrera:
-                                <select class="form-inline" id="s-carrera" name="dob_carrera">
-
-                                    <option value="-">-</option>
-                                    <option value="Ingenieria en Sistemas">Ingenieria en Sistemas</option>
-                                    <option value="Ingenieria en Computacion">Ingenieria en Computacion</option>
-                                    <option value="IngenieriaCivil">Ingenieria Civil</option>
-                                    <option value="Ingenieria Industrial">Ingenieria Industrial</option>
-                                </select>
-
-                                Materia:
-                                <select id="s-materia" name="dob_materia">
-
-                                    <option value="-">-</option>
-                                    <option value="algoritmos">algoritmos</option>
-
-                                </select>
-                                Profesor :
-                                <select id="s-profesor" name="dob_profesor">
-                                    <option value="-">-</option>
-                                    <option value="Francisco">Frnacisco</option>
-
-                                </select>
-
-                                <!-- Small modal -->
-                                <a type="button" href="#ventana1" class="btn btn-primary" data-toggle="modal"
-                                   onclick="tPredefinido()">Enviar</a>
-                                <div class="modal fade" id="ventana1">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <!--Header ventana emergente-->
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-hidden="true">&times;
-                                                </button>
-                                                <h3 class="modal-title">Previsualización del mensaje</h3>
-                                            </div>
-                                            <!--Contenido-->
-                                            <div class="modal-body">
-
-                                                <lb id="lb1"></lb>
-
-                                            </div>
-                                            <!--footer ventana emergente-->
-                                            <div class="modal-footer">
-
-                                                <button type="button" class="btn btn-danger" data-dismiss="modal">
-                                                    Cancelar
-                                                </button>
-                                                <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                                    Enviar
-                                                    Mensaje
-                                                </button>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <div class="panel panel-heading"><h3>Mensaje de ausencia de profesores</h3></div>
+                <div class="panel-body">
+                    <div class="container" >
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <label>Fecha:</label>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="input-group date" data-provide="datepicker">
+                                    <input type="date" class="form-control" id="s-fecha">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="menu2" class="tab-pane fade">
-
-                        <div class="panel panel-heading"><h3>Mensajes Generales</h3></div>
-                        <div class="panel-body">
-                            <textarea  class="form-control" rows="6" id="m2Txta" name="texto"></textarea>
-                            <div>
-                                <button type="button" class="btn btn-info" onclick="popup()">Firmar</button>
+                        <div class="row" name="carrera">
+                            <div class="col-lg-1">
+                                <label>Carrera</label>
                             </div>
-                            <div>
-                                <button type="button" class="btn btn-danger" onclick="limpiar()">Cancelar</button>
-                                <button type="submit" class="btn btn-primary" onclick="customMessage()">Enviar Mensaje
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="menu3" class="tab-pane fade">
-                        <div class="panel panel-heading"><h3>Calculos de horas</h3></div>
-                        <div class="panel-body">
-                            <form class="panel-body">
-
-                                <label>Iingrese las horas trabajadas</label> <input id="inputPxH"type="number" min="0" class="input-sm">
-                                <label>Precio por hora =$ 76</label>
-                                <button type="button" class=" btn btn-info" onclick="clacular()"> Calcular</button>
-
-
-                                <div id="resultados">
-                                    <h2 id="tablaTitulo"> Resultados</h2>
-                                    <table class="table table-striped" id="tblaresultados">
-                                        <thead>
-                                        <tr>
-                                            <th>Pesos</th>
-                                            <th>Dolares</th>
-                                            <th>Euros</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td id="pesos"></td>
-                                            <td id="dolares"></td>
-                                            <td id="euros"></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <button class="btn btn-info" onclick="ocultar()">ok</button>
+                            <div class="col-lg-3">
+                                <div class="form-inline">
+                                    <select class="form-control" id="s-carrera"></select>
+                                    <button class="btn" onclick=mostrarIngreso('divAddCarrera')>+</button>
                                 </div>
-                            </form>
-
-
+                            </div>
+                            <div class="col-lg-5" id="divAddCarrera">
+                                <div class="form-inline">
+                                    <input class="form-control" id="inputAddCarrera">
+                                    <button class="btn btn-success" onclick="addVal('s-carrera','inputAddCarrera','divAddCarrera')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="ocultarIngreso('divAddCarrera','inputAddCarrera')">Cancelar</button>
+                                </div>
+                            </div>
                         </div>
-
+                        <div class="row" name="materia">
+                            <div class="col-lg-1">
+                                <label>Materia</label>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-inline">
+                                    <select class="form-control" id="s-materia"></select>
+                                    <button class="btn" onclick="mostrarIngreso('divAddMateria')">+</button>
+                                </div>
+                            </div>
+                            <div class=" col-lg-5" id="divAddMateria">
+                                <div class="form-inline">
+                                    <input class="form-control" id="inputAddMateria">
+                                    <button class="btn btn-success"
+                                            onclick="addVal('s-materia','inputAddMateria','divAddMateria')">Agregar</button>
+                                    <button class="btn btn-danger"
+                                            onclick="ocultarIngreso('divAddMateria','inputAddMateria')">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" name="profesor">
+                            <div class="col-lg-1">
+                                <label>Profesor</label>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-inline">
+                                    <select class="form-control" id="s-profesor"></select>
+                                    <button class="btn" onclick="mostrarIngreso('divAddProfesor')">+</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-5" id="divAddProfesor">
+                                <div class="form-inline">
+                                    <input class="form-control" id="inputAddProfesor">
+                                    <button class="btn btn-success" onclick="addVal('s-profesor','inputAddProfesor','divAddProfesor')">Agregar</button>
+                                    <button class="btn btn-danger" onclick="ocultarIngreso('divAddProfesor','inputAddProfesor')">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1">
+                                <button class="btn btn-primary" onclick="sendMessage()">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="panel panel-heading"><h3>Mensajes Generales</h3></div>
+                <div class="panel-body">
+                    <div class="form-inline">
+                        <textarea  class="form-control" rows="6" id="m2Txta" name="texto"></textarea>
+                    </div>
+                    <div class="form-inline">
+                        <button type="button" class="btn btn-info" onclick="popup()">Firmar</button>
+                        <button type="button" class="btn btn-danger" onclick="limpiar()">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" onclick="customMessage()">Enviar Mensaje</button>
                     </div>
                 </div>
             </div>
-        </section>
+            <div id="menu3" class="tab-pane fade">
+                <div class="panel panel-heading"><h3>Calculos de horas</h3></div>
+                <div class="panel-body">
 
+                            <label>Iingrese las horas trabajadas</label> <input id="inputHoras"type="number" min="1" >
+                            <label>Precio por hora =$</label><input id="pxh" type="number" min="76">
+                            <button type="button" class=" btn btn-info" onclick="clacular()"> Calcular</button>
+                        <div id="resultados">
+                            <h2 id="tablaTitulo"> Resultados</h2>
+                            <table class="table table-striped" id="tblaresultados">
+                                <thead>
+                                <tr>
+                                    <th>Pesos</th>
+                                    <th>Dolares</th>
+                                    <th>Euros</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td id="pesos"></td>
+                                    <td id="dolares"></td>
+                                    <td id="euros"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-info" onclick="ocultar()">ok</button>
+                        </div>
+                </div>
 
+            </div>
+        </div>
     </div>
-</div>
-<footer>
-    <p>Diseñado por Francisco Senestrari</p>
-</footer>
+</section>
+<footer><label>Creado por Francisco Senestrari</label></footer>
 </body>
+
 </html>

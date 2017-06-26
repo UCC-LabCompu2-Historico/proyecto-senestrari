@@ -8,7 +8,7 @@
  */
 var draw;
 function  comenzar() {
-    canvas = document.getElementById("canvasFirma");
+    canvas = document.getElementById("canvas");
     ctx = canvas.getContext('2d');
     document.addEventListener('mousedown',presionar, false);
     document.addEventListener('mousemove',mover, false);
@@ -53,4 +53,13 @@ function mover(usuario) {
 function soltar() {
     ctx.closePath();
     draw = false;
+}
+
+/**
+ * Descripción  cancela  y cierra pagina
+ * @method salir()
+ * @return void
+ */
+function salir() {
+    window.close();
 }

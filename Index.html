@@ -6,26 +6,28 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/IndexStyle.css">
-    <link rel="shortcut icon" href="icon.ico">
+    <link rel="shortcut icon" href="/img/icon.ico">
     <title>ZM</title>
 </head>
 <body>
-    <div class="jumbotron  text-center" >
-        <h1 id="Titulo1">Sistema de mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"
-                                                   id="spEnv"></span></h1>
+<div class="jumbotron  text-center" >
+    <h1 id="Titulo1">Sistema de mensajes <span class="glyphicon glyphicon-envelope" aria-hidden="true"
+                                               id="spEnv"></span></h1>
 
-    </div>
+</div>
 
 <div class="container text-center" >
 
     <div class="panel panel-primary">
         <div class="panel-heading" >
-            <h3 class="panel-title">Acceder</h3><img src="icon.ico">
+            <h3 class="panel-title">Acceder</h3><img src="img/icon.ico">
 
             <div class="panel-footer">
                 <form class="form-signin" action="home.html">
-                    <input type="text" class="form-control" name="ipUsuario" placeholder="Usuario" required="" autofocus="" />
-                    <input type="password" class="form-control" name="ipContraseña" placeholder="Contraseña" required=""/>
+                    <input type="text"  class="form-control" placeholder="Usuario"
+                           title="Solo letras y numeros 6 digitos" pattern="[a-zA-z0-9]{6}" name="formName" required>
+
+                    <input type="password" class="form-control" name="ipContraseña" placeholder="Contraseña" minlength="8" required/>
                     <div class ="form-group">
                         <button class="btn btn-lg btn-block btn-info" type="submit">Login</button>
                     </div>

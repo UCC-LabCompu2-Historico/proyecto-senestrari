@@ -6,7 +6,7 @@
  */
 
 function dibujarCH() {
-    var ctx = document.getElementById("canvas").getContext("2d");
+    var ctx = document.getElementById("canvasCarizard").getContext("2d");
 
 // #path5350
     ctx.beginPath();
