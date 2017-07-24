@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by frans on 21/06/2017.
  */
 /**
@@ -15,10 +15,7 @@ function addVal(sel,inp,div) {
     var select = document.getElementById(sel);
     var input = document.getElementById(inp);
     var c = document.createElement("option");
-    var array=[];
     c.text = input.value;
-    array.push(input.value);
-    localStorage.setItem(sel, JSON.stringify(array));
     select.options.add(c,(select.length+1));
     ocultarIngreso(div,inp);
 
@@ -65,20 +62,6 @@ function ocultarIngreso(divId, inputID) {
      cargarCarreras();
  }
 
- function cargarLocal(sel) {
-     var select = document.getElementById(sel);
-     var array = localStorage.getItem('myArray');
-     array = JSON.parse(array);
-     for( var i =0;i<array.length;i++)
-     {
-         var c = document.createElement("option");
-         c.text = array[i];
-         select.options.add(c,(select.length+1));
-     }
-
-
-
- }
 /**
  * Descripción: llena el select con los valores del array
  * @method cargarCarreras()
@@ -223,7 +206,7 @@ function clacular() {
     if (horas != "" || pxh!= "") {
     document.getElementById("pesos").innerHTML = Math.round(resul);
     document.getElementById("dolares").innerHTML = Math.round(resul / 17);
-    document.getElementById("euros").innerHTML = Math.round(resul / 17);
+    document.getElementById("euros").innerHTML = Math.round(resul / 20);
     document.getElementById("resultados").style.display = "block";
 }
 else
@@ -253,15 +236,3 @@ function popup() {
     window.open("firma.html");
 }
 
-
-function pureba() {
-    swal({
-        title: "An input!",
-        text: "Write something interesting:",
-        type: "canvas",
-        showCancelButton: true,
-        closeOnConfirm: false,
-        animation: "slide-from-top",
-        inputPlaceholder: "Write something"
-    });
-}
